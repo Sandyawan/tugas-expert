@@ -1,0 +1,71 @@
+/* #menu-list {
+  display: grid;
+} */
+
+@media screen and (max-width: 601px) {
+
+    .nav {
+      z-index: 10;
+      background-color: none;
+      width: 300px;
+      position: fixed;
+      flex-wrap: wrap;
+  
+      /* This trasform moves the drawer off canvas. */
+      -webkit-transform: translate(-300px, 0);
+      transform: translate(-500px, 91px);
+  
+      /* Optionally, we animate the drawer. */
+      transition: transform 0.3s ease;
+    }
+  
+    .open {
+      -webkit-transform: translate(0, 0);
+      transform: translate(-20px, 91px);
+    }
+  
+    .nav-list {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .nav-item {
+      border-bottom: 1px solid #e0e0e0;
+      width: 100%;
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      background-color: white;
+    }
+  }
+
+
+ @media  screen and (max-width: 900px) {
+  #menu-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media  screen and (max-width: 600px) {
+  #menu-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+  @media screen and (min-width: 600px) {
+    #menu {
+      display: none;
+    }
+  
+    #drawer {
+      display: block;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    max-width: 1200px;
+  }
+}
